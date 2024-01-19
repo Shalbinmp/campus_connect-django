@@ -1,0 +1,30 @@
+{% extends 'temp/teacher_2_home.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Teacher View time schedule</title>
+</head>
+<body>
+	<center>
+		<h1 class="text-primary">View Course</h1>
+		<table border="2" class="table table-bordered table-striped text-dark table-condensed " style="width: 700px">
+			<tr>
+				<th>Date</th>
+				<th>Time</th>
+			</tr>
+            {% for i in x %}
+
+
+			<tr>
+				<td>{{ i.date }}</td>
+				<td>{{ i.time }}</td>
+			</tr>
+            {% endfor %}
+			
+		</table>
+	</center>
+
+</body>
+</html>
+{% endblock %}

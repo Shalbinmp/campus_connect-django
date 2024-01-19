@@ -1,0 +1,37 @@
+{% extends 'temp/admin_2_home.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ad view payment</title>
+<body>
+	<center>
+		<h1 class="text-primary">View payment</h1>
+		<table border="2" class="table table-bordered table-striped text-dark table-condensed " style="width: 700px">
+			<tr>
+				<th>card holder name</th>
+				<th>cvv</th>
+				<th>amount</th>
+				<th>card number</th>
+                <th>net banking</th>
+                <th>upi</th>
+			</tr>
+            {% for i in x %}
+
+
+			<tr>
+				<td>{{ i.amount }}</td>
+				<td>{{ i.card_number }}</td>
+				<td>{{ i.card_holder_name }}</td>
+				<td>{{ i.cvv }}</td>
+                <td>{{ i.net_banking }}</td>
+                <td>{{ i.upi }}</td>
+			</tr>
+            {% endfor %}
+			
+		</table>
+	</center>
+
+</body>
+</html>
+{% endblock %}

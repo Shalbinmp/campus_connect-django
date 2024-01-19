@@ -1,0 +1,31 @@
+{% extends 'temp/student_2_home.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>student view course</title>
+</head>
+<body>
+	<center>
+		<h1 class="text-primary">View Course</h1>
+		<table border="2" class="table table-striped table-bordered text-dark table-active" style="width: 400px">
+			<tr>
+				<th class="text-center">courses</th>
+				
+			</tr>
+            {% for i in x %}
+
+
+
+			<tr>
+				<td>{{ i.course }}</td>
+				
+			</tr>
+             {% endfor %}
+			
+		</table>
+	</center>
+
+</body>
+</html>
+{% endblock %}

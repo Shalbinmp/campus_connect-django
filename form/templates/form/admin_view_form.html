@@ -1,0 +1,34 @@
+{% extends 'temp/admin_2_home.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ad view filled form</title>
+</head>
+<body>
+	<center>
+		<h1 class="text-primary">View filled form</h1>
+		<table border="2" class="table table-striped table-bordered text-dark" style="width: 1200px">
+			<tr>
+				<th>Type of form</th>
+				<th>form submitted posted</th>
+
+			</tr>
+            {% for i in x %}
+
+
+			<tr>
+				<td>{{ i.type }}</td>
+				<td>{% if  i.submited_form  == "not submited" %}
+                      not submitted
+                    {% else %}
+                    <a href="/static/{{ i.submited_form }}">{{ i.submited_form }}</a>
+                {% endif %}</td>
+			</tr>
+            {% endfor %}
+		</table>
+	</center>
+
+</body>
+</html>
+{% endblock %}

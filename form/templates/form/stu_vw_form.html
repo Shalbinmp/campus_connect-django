@@ -1,0 +1,39 @@
+{% extends 'temp/student_2_home.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Teacher View filled form</title>
+</head>
+<body>
+	<center>
+		<h1 class="text-primary">View forms</h1>
+		<table border="2" class="table table-striped table-bordered text-dark" style="width: 1200px">
+			<tr>
+				<th>Type of form</th>
+                <th>form to fill</th>
+				<th>Filled Form</th>
+                <th>post form</th>
+
+			</tr>
+            {% for i in x %}
+
+
+			<tr>
+				<td>{{ i.type }}</td>
+				<td><a href="/static/{{ i.admin_form }}" style="color: #7d2830">{{ i.admin_form }}</a></td>
+                <td>{% if  i.submited_form  == "not submited" %}
+                      not submitted
+                    {% else %}
+                    <a href="/static/{{ i.submited_form }}">{{ i.submited_form }}</a>
+                {% endif %}</td>
+                <td><a href="/form/form_pos_student/{{ i.forms_id }}">add filled form</a> </td>
+			</tr>
+            {% endfor %}
+			
+		</table>
+	</center>
+
+</body>
+</html>
+{% endblock %}

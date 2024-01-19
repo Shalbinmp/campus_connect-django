@@ -1,0 +1,37 @@
+{% extends 'temp/student_2_home.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>student View allotment</title>
+</head>
+<body>
+	<center>
+		<h1 class="text-primary">View allotment</h1>
+		<table border="2" class="table table-striped table-bordered text-dark" style="width: 1200px">
+			<tr>
+				<th>cap id</th>
+				<th>name</th>
+				<th>age</th>
+				<th>dob</th>
+				<th>address</th>
+				<th>mobile number</th>
+
+			</tr>
+            {% for i in x %}
+			<tr>
+				<td>{{ i.cap_id }}</td>
+				<td>{{ i.name }}</td>
+				<td>{{ i.age }}</td>
+				<td>{{ i.dob }}</td>
+				<td>{{ i.address }}</td>
+				<td>{{ i.mobile_number }}</td>
+			</tr>
+            {% endfor %}
+			
+		</table>
+	</center>
+
+</body>
+</html>
+{% endblock %}

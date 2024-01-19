@@ -1,0 +1,29 @@
+{% extends 'temp/teacher_2_home.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ad View feedback</title>
+</head>
+<body>
+	<center>
+		<h1 class="text-primary">View Feedback</h1>
+		<table border="2" class="table table-striped table-bordered text-dark" style="width: 500px">
+			<tr>
+				<th class="text-center">Feedback</th>
+			</tr>
+            {% for i in x %}
+
+
+			<tr>
+				<td>{{ i.feedback }}</td>
+				
+			</tr>
+            {% endfor %}
+			
+		</table>
+	</center>
+
+</body>
+</html>
+{% endblock %}

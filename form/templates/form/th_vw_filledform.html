@@ -1,0 +1,35 @@
+{% extends 'temp/teacher_2_home.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Teacher View filled form</title>
+</head>
+<body>
+	<center>
+		<h1 class="text-primary">View forms</h1>
+		<table border="2" class="table table-striped table-bordered text-dark" style="width: 1200px">
+			<tr>
+				<th>Type of form</th>
+				<th>Filled Form</th>
+
+			</tr>
+            {% for i in x %}
+
+
+			<tr>
+				<td>{{ i.type }}</td>
+				<td>{% if  i.submited_form  == "not submited" %}
+                      not submitted
+                    {% else %}
+                    <a href="/static/{{ i.submited_form }}">{{ i.submited_form }}</a>
+                {% endif %}</td>
+			</tr>
+            {% endfor %}
+			
+		</table>
+	</center>
+
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'temp/student_2_home.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>postform</title>
+</head>
+<body>
+<center>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h1 class="text-primary">Post Form</h1>
+        <table class="text-dark">
+            <tr>
+                <td>type of form</td>
+                <td><select name="type" class="form-control">
+                    <option disabled>select</option>
+                    <option value="management form">management form</option>
+                    <option value="admission form">admission form</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>filled form upload</td>
+                <td><input type="file" name="file" class="form-control" required></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button value="submit" class="btn btn-primary">submit</button> </td>
+            </tr>
+        </table>
+    </form>
+</center>
+</body>
+</html>
+{% endblock %}

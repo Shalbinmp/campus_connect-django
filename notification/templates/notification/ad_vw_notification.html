@@ -1,0 +1,28 @@
+{% extends 'temp/admin_2_home.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ad view notification</title>
+</head>
+<body>
+	<center>
+		<h1 class="text-primary">View notification</h1>
+		<table border="2" class="table table-bordered table-striped text-dark table-condensed " style="width: 700px">
+			<tr>
+				<th class="text-center">notification</th>
+			</tr>
+            {% for i in x %}
+
+
+			<tr>
+				<td>{{ i.notification }}</td>
+			</tr>
+            {% endfor %}
+			
+		</table>
+	</center>
+
+</body>
+</html>
+{% endblock %}
